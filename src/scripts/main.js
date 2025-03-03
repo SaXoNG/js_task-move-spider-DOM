@@ -1,14 +1,10 @@
 'use strict';
 
 const spider = document.querySelector('.spider');
-
-spider.style.position = 'absolute';
-
 const box = document.querySelector('.wall');
+const rect = box.getBoundingClientRect();
 
 box.addEventListener('click', (e) => {
-  const rect = box.getBoundingClientRect();
-
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
